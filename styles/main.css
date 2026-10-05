@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+section {
+  margin-bottom: 100px;
+}
+
+.container {
+  background-color: #0d0e66;
+  padding: 30px 20px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.container h1 {
+  font-size: 22px;
+  color: white;
+}
+input {
+  padding: 10px;
+}
+button {
+  padding: 10px;
+  background-color: #6aa5e5;
+}
+h2 {
+  margin-bottom: 20px;
+}
+input {
+  margin-bottom: 20px;
+}
+/* Todo  */
+
+#todosOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#task-input {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#task-input:focus {
+  border-color: #007bff;
+}
+
+#add-button {
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: transparent;
+}
+
+#add-button:hover {
+  background-color: #089d17;
+}
+
+.icons {
+  width: 48px;
+}
+
+.button-download,
+#delete-completed-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+#delete-completed-button {
+  background-color: #ef7878;
+  display: none;
+}
+#delete-completed-button:hover {
+  background-color: #b84747;
+  transform: translateY(-2px);
+}
+
+.button-download:hover,
+#delete-completed-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.button-download:active,
+#delete-completed-button:active {
+  transform: translateY(0);
+}
+
+#posts-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.todo {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.todo:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.todo p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.todo input[type="checkbox"] {
+  margin-right: 12px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.button-function {
+  border: none;
+  margin-right: 8px;
+  padding: 8px 16px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button-function img {
+  width: 25px;
+}
+
+.button-function:hover {
+  transform: scale(1.1);
+}
+
+.todo.dragging {
+  opacity: 0.4;
+  background-color: #686767;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo {
+  transition: all 0.3s;
+}
+.text-element {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #e1dada;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#task-container,
+#signin-form,
+#signup-form {
+  display: none;
+}
+
+.logout-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.logout-button:hover {
+  background-color: #007bff;
+}
+
+.google-sign-button {
+  background-image: url(./../assets/icons/google.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#forgot-password-form {
+  display: none;
+}

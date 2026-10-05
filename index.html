@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+  <!-- Todo  -->
+  <section>
+    <div id="todosOverlay">
+      <div id="spinner"></div>
+    </div>
+    <form id="signup-form">
+      <h2>Registration</h2>
+      <input type="email" id="signup-email" placeholder="email" required>
+      <input type="password" id="signup-password" placeholder="password" required>
+      <button type="submit">Register</button>
+      <button type="button" id="signin">Log in</button>
+      <button id="google-signup-button" class="google-sign-button">Register with Google</button>
+    </form>
+    <form id="signin-form">
+      <h2>Autorisation</h2>
+      <input type="email" id="signin-email" placeholder="email" required>
+      <input type="password" id="signin-password" placeholder="password" required>
+      <button type="submit">Log in</button>
+      <button id="google-signin-button" class="google-sign-button">Log in with Google</button>
+      <button id="forgot-password-button" type="button">Forgot Password?</button>
+    </form>
+
+    <form id="forgot-password-form">
+      <input type="email" id="forgot-password-email" placeholder="email" required>
+      <button type="submit">Send link to reset password</button>
+    </form>
+    <div id="forgot-password-message"></div>
+
+
+    <div id="task-container">
+      <div class="input-block">
+        <input type="text" id="task-input" placeholder="Введите задачу" />
+        <button id="add-button">
+          <img src="assets/img/icon-add.png" class="icons" />
+        </button>
+      </div>
+
+
+
+      <div id="todos-container"></div>
+      <button id="delete-completed-button">Delete all completed tasks</button>
+
+    </div>
+    <button id="logout-button" class="logout-button">Log out</button>
+  </section>
+  <script src="src/app.js" type="module"></script>
+</body>
+
+</html>
